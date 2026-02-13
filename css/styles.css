@@ -154,7 +154,12 @@ body {
 .active {
   color: #404bbf;
 }
-
+.burger-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
 /* Hero Section */
 .hero {
   max-width: 1440px;
@@ -322,8 +327,8 @@ body {
 
 .img-box {
   position: relative;
-  width: 360px;
-  height: 300px;
+  /* width: 360px;
+  height: 300px; */
   overflow: hidden;
 }
 
@@ -495,7 +500,10 @@ body {
 .icon-send {
   fill: #fff;
 }
-
+/* Burger */
+.burger-menu{
+  display: none;
+}
 /* POPUP */
 .popup-wrapper {
   width: 100%;
@@ -539,7 +547,7 @@ body {
   pointer-events: auto;
 }
 
-.popup-close {
+.popup-close, .burger-close {
   border-radius: 50%;
   background-color: #E7E9FC;
   width: 24px;
@@ -563,11 +571,19 @@ body {
 
 }
 .popup-close:hover .icon-close,
-.popup-close:focus .icon-close {
+.burger-close:hover .icon-close, 
+.popup-close:focus .icon-close, 
+.burger-close:focus .icon-close {
+  fill: #404bbf;
+}
+.popup-close:focus .icon-close,
+.burger-close:focus .icon-close {
     fill: #ffffff;
 }
 .popup-close:hover,
-.popup-close:focus {
+.burger-close:hover,
+.popup-close:focus,
+.burger-close:focus {
   background-color: #404bbf;
   border: none;
 }

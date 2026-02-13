@@ -15,6 +15,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles-adaptiv.css" />
   </head>
   <body>
     <header class="header">
@@ -43,6 +44,11 @@
             </li>
           </ul>
         </address>
+        <button class="header-btn burger-btn" type="button">
+          <svg class="icon icon-burger" width="24" height="24">
+            <use href="./images/icons.svg#icon-burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -468,6 +474,60 @@
         </div>
       </div>
     </footer>
+    <div class="burger-menu">
+      <button class="burger-close" type="button">
+        <svg class="icon-close" width="8" height="8">
+          <use href="./images/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="burger-list">
+        <li class="buger-item">
+          <a class="burger-link active" href="./index.html">Studio</a>
+        </li>
+        <li class="buger-item">
+          <a class="burger-link" href="#">Portfolio</a>
+        </li>
+        <li class="buger-item"><a class="burger-link" href="#">Contacts</a></li>
+      </ul>
+      <ul class="burger-contact">
+        <li class="burger-contact-item">
+          <a class="contacts-link active" href="tel:+110001111111"
+            >+11 (000) 111-11-11</a
+          >
+        </li>
+        <li class="burger-contact-item">
+          <a class="contacts-link" href="mailto:info@devstudio.com"
+            >info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="social-list">
+        <li>
+          <a href="" class="social-link"
+            ><svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-instagram"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="" class="social-link"
+            ><svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-twitter"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="" class="social-link"
+            ><svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-facebook"></use></svg
+          ></a>
+        </li>
+        <li>
+          <a href="" class="social-link"
+            ><svg class="icon" width="16" height="16">
+              <use href="./images/icons.svg#icon-linkedin"></use></svg
+          ></a>
+        </li>
+      </ul>
+    </div>
 
     <div class="popup-wrapper">
       <div class="popup">
