@@ -11,10 +11,15 @@ body {
   background-color: #ffffff;
 }
 .active { color: #404bbf; }
-.container {
+.accent{
+  color: #4D5AE5;
+}
+.container,.burger-container {
   max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
+  position: relative;
+
 }
 
 .visually-hidden {
@@ -283,6 +288,13 @@ body {
 .sub-input:focus{
   border: 1px solid #31D0AA;
 }
+.sub-input::placeholder{
+  color:#fff;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
 .subscribe-btn {
   background-color: #4D5AE5;
   color: #fff;
@@ -471,6 +483,15 @@ body {
 
 
 /* --- BURGER MENU (Mobile Only) --- */
+.burger-container {
+  padding-top: 72px;
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+  height: 100%;
+  align-items: baseline;
+  justify-content: space-between;
+}
 .burger-menu {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
