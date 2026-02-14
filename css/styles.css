@@ -571,7 +571,7 @@ TABLET STYLES (min-width: 768px)
   .features-subtitle { text-align: left; }
 
   .team-list { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 64px 24px; }
-  .team-item { width: calc((100% - 24px) / 2); }
+  .team-item { width: 264px; margin: 0; }
 
   .portfolio-list { flex-direction: row; flex-wrap: wrap; gap: 72px 24px; }
   .portfolio-item { width: calc((100% - 24px) / 2); max-width: 356px; }
