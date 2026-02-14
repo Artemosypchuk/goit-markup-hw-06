@@ -77,6 +77,13 @@ body {
   background-position: center;
   background-size: cover;
 }
+/* Retina-фон для Mobile (@2x) */
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+                      url('../images/hero-bg-m@2x.jpg');
+  }
+}
 
 .hero-title {
   font-size: 36px;
@@ -279,12 +286,12 @@ body {
 }
 .icon-send { fill: #fff; }
 /* --- MODAL / POPUP --- */
-.popup-close{
+.popup-close,.burger-close{
   position: absolute;
   top: 24px; right: 24px;
   background: #E7E9FC;
   border-radius: 50%;
-  border: none;
+  border: solid 1px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   fill: #2F2F37;
   display: flex;
@@ -297,8 +304,19 @@ body {
   fill: #2F2F37;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.popup-close:hover, .popup-close:focus { background-color: #404BBF; }
-.popup-close:hover .icon-close, .popup-close:focus .icon-close { fill: #fff; }
+.popup-close:hover, 
+.popup-close:focus,
+.burger-close:hover,
+.burger-close:focus { 
+  background-color: #404BBF;
+}
+.popup-close:hover 
+.icon-close, 
+.popup-close:focus .icon-close,
+.burger-close:hover .icon-close,
+.burger-close:focus .icon-close { 
+  fill: #fff; 
+}
 .popup-wrapper {
   position: fixed;
   top: 0; left: 0; width: 100%; height: 100%;
@@ -308,7 +326,14 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.popup-wrapper.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
+.popup-wrapper.is-open, .burger-menu.is-open { 
+  opacity: 1; 
+  visibility: visible; 
+  pointer-events: auto; 
+}
+.burger-menu.is-open{
+  transform: translateX(0);
+}
 
 .popup {
   position: absolute;
@@ -438,13 +463,24 @@ body {
   padding: 72px 24px 40px 16px;
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
+  opacity: 0; 
+  visibility: hidden; 
+  pointer-events: none;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.burger-menu.showen { transform: translateX(0); }
 
 .burger-list { display: flex; flex-direction: column; gap: 40px; margin-bottom: 168px; }
 .burger-link { font-weight: 700; font-size: 36px; line-height: 1.11; }
-
+.burger-contact{
+  display: flex; 
+  flex-direction: column; 
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.burger-social{
+  column-gap: 40px;
+  justify-content: flex-start;
+}
 
 /* =====================================================
 TABLET STYLES (min-width: 768px)
@@ -478,6 +514,12 @@ TABLET STYLES (min-width: 768px)
     padding: 112px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
                       url('../images/hero-bg-t.jpg');
+  }
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+                        url('../images/hero-bg-t@2x.jpg');
+    }
   }
   .hero-title { font-size: 56px; max-width: 496px; margin-bottom: 36px; }
 
@@ -515,7 +557,13 @@ DESKTOP STYLES (min-width: 1158px)
     max-width: 1440px;
     padding: 188px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-                      image-set(url('../images/hero-bg.jpg') 1x, url('../images/hero-bg@2x.jpg') 2x);
+                      url('../images/hero-bg.jpg');
+  }
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
+                        url('../images/hero-bg@2x.jpg');
+    }
   }
   .hero-title { margin-bottom: 48px; }
 

@@ -25,6 +25,6 @@
 
   function toggleBurger() {
     const burgerMenu = document.querySelector('.burger-menu');
-    burgerMenu.classList.toggle('showen');
+    burgerMenu.classList.toggle('is-open');
   }
 })();
